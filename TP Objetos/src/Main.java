@@ -6,8 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import Negocio.*;
 import java.awt.event.*;
-import Model.*;
+
 import View.Banner;
 import View.FrameLogin;
 

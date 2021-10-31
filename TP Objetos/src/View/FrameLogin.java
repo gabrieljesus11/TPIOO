@@ -1,9 +1,13 @@
 package View;
 
+import Packages.TextPrompt;
+
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 public class FrameLogin extends JFrame{
 
@@ -11,8 +15,10 @@ public class FrameLogin extends JFrame{
     JButton btnSalir = new JButton("Salir");
     JLabel userLabel = new JLabel("Usuario", JLabel.CENTER);
     JLabel passLabel = new JLabel("Contraseña", JLabel.CENTER);
-    JTextField userTextField = new JTextField("Usuario");
-    JTextField passTextField = new JTextField("Contraseña");
+    JTextField userTextField = new JTextField();
+    TextPrompt userPH = new TextPrompt("Usuario", userTextField);
+    JPasswordField passTextField = new JPasswordField();
+    TextPrompt passPH = new TextPrompt("Contraseña", passTextField);
     JPanel login;
     JPanel buttons;
 
