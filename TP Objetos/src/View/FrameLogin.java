@@ -14,6 +14,7 @@ public class FrameLogin extends JFrame{
     // General
     JButton btnIniciar = new JButton("Iniciar");
     JButton btnSalir = new JButton("Salir");
+    JButton btnRegister = new JButton("Registrarse");
     JPanel login;
     JPanel buttons;
 
@@ -52,12 +53,23 @@ public class FrameLogin extends JFrame{
         };
         ActionListener iniciar = new ActionListener(){
             public void actionPerformed(ActionEvent e){
+                Banner banner = new Banner();
+                banner.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+                dispose();
                 System.out.println("Aquí va la lógica de iniciar sesión");
+            }
+        };
+        ActionListener registrar = new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                FramePaciente paciente = new FramePaciente();
+                paciente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                dispose();
             }
         };
 
         btnIniciar.addActionListener(iniciar);
         btnSalir.addActionListener(cerrar);
+        btnRegister.addActionListener(registrar);
 
     }
 
@@ -66,6 +78,7 @@ public class FrameLogin extends JFrame{
         buttons.setLayout(new FlowLayout());
         buttons.add(btnIniciar);
         buttons.add(btnSalir);
+        buttons.add(btnRegister);
     }
 
     private void initLoginPanel(){

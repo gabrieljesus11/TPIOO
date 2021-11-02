@@ -34,15 +34,15 @@ public class Main
 //
  //
 //
-        //Banner banner = new Banner();
-        //banner.setVisible(true);
+       // Banner banner = new Banner();
+       // banner.setVisible(true);
 //
 
-//        FrameLogin login = new FrameLogin();
-//        login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        FrameLogin login = new FrameLogin();
+        login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        FramePaciente paciente = new FramePaciente();
-        paciente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //FramePaciente paciente = new FramePaciente();
+        //paciente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 //        FrameOdontologo odontologo = new FrameOdontologo();
 //        odontologo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

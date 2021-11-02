@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 
 public class FramePaciente extends JFrame{
 
+    
     // General
     JButton btnRegistrar = new JButton("Registrar");
     JButton btnSalir = new JButton("Cancelar");
@@ -57,6 +58,7 @@ public class FramePaciente extends JFrame{
 
 
     public FramePaciente(){
+
         // Inicializamos los Paneles
         initPacientePanel();
         initNombrePanel();
@@ -89,19 +91,25 @@ public class FramePaciente extends JFrame{
 
 
     private void initListeners() {
-        ActionListener cerrar = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        };
-        ActionListener iniciar = new ActionListener(){
+        ActionListener registrar = new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.out.println("Aquí va la lógica de iniciar sesión");
+                FrameLogin login = new FrameLogin();
+                dispose();
+                login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             }
         };
 
-        btnRegistrar.addActionListener(iniciar);
+        ActionListener cerrar = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FrameLogin login = new FrameLogin();
+                login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                dispose();
+            }
+        };
+
+        btnRegistrar.addActionListener(registrar);
         btnSalir.addActionListener(cerrar);
 
     }
