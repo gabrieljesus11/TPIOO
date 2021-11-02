@@ -11,16 +11,22 @@ import java.awt.event.ActionListener;
 
 public class FrameLogin extends JFrame{
 
+    // General
     JButton btnIniciar = new JButton("Iniciar");
     JButton btnSalir = new JButton("Salir");
-    JLabel userLabel = new JLabel("Usuario", JLabel.CENTER);
-    JLabel passLabel = new JLabel("Contraseña", JLabel.CENTER);
-    JTextField userTextField = new JTextField();
-    TextPrompt userPH = new TextPrompt("Usuario", userTextField);
-    JPasswordField passTextField = new JPasswordField();
-    TextPrompt passPH = new TextPrompt("Contraseña", passTextField);
     JPanel login;
     JPanel buttons;
+
+    // Usuario
+    JLabel userLabel = new JLabel("Usuario", JLabel.CENTER);
+    JTextField userTextField = new JTextField();
+    TextPrompt userPH = new TextPrompt("Usuario", userTextField);
+
+    // Contraseña
+    JLabel passLabel = new JLabel("Contraseña", JLabel.CENTER);
+    JPasswordField passTextField = new JPasswordField();
+    TextPrompt passPH = new TextPrompt("Contraseña", passTextField);
+
 
     public FrameLogin(){
         initLoginPanel();

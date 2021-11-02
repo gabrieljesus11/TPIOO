@@ -1,16 +1,11 @@
-import java.awt.Container;
-import java.awt.FlowLayout;
+import java.awt.*;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import Negocio.*;
 import java.awt.event.*;
 
-import View.Banner;
-import View.FrameLogin;
+import View.*;
 
 public class Main
 {
@@ -43,7 +38,15 @@ public class Main
         //banner.setVisible(true);
 //
 
-        FrameLogin login = new FrameLogin();
-        login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        FrameLogin login = new FrameLogin();
+//        login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        FramePaciente paciente = new FramePaciente();
+        paciente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+//        FrameOdontologo odontologo = new FrameOdontologo();
+//        odontologo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        
     }
 }
