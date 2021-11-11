@@ -5,6 +5,7 @@ public class Persona {
     private String apellido;
     private String nombre;
     private int id;
+    private int edad;
 
     public Persona(String apellido, String nombre) {
         this.apellido = apellido;
@@ -37,5 +38,12 @@ public class Persona {
         return nombre;
     }
 
-    
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
 }
+

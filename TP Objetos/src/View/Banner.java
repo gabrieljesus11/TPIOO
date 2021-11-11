@@ -2,22 +2,28 @@ package View;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import View.*;
 
 public class Banner extends JFrame {
 
     //configuracion de ventana
     private JMenuBar menuBar;
-    private JMenu menu1;
-    private JMenuItem menuItem20, menuItem21, menuItem22;
+    private JMenu menuPrincipal;
+    private JMenuItem BtnAdministracion, BtnConfiguracion, BtnCerrarSesion;
+
+    JPanel banner;
+
 
     public Banner() {
         this.setTitle("Pagina principal");
         this.setSize(500,500);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        initListeners();
+        //initListenersBanner();
         //configuracion layout
         FlowLayout layout = new FlowLayout(1, 10,10);
         setLayout(layout);
@@ -35,40 +41,63 @@ public class Banner extends JFrame {
 
         //configuracion menu
         menuBar = new JMenuBar();
-        menu1 = new JMenu("Menu");
-
-        menuItem20 = new JMenuItem("Administracion");
-        menuItem21 = new JMenuItem("Configuracion");
-        menuItem22 = new JMenuItem("Cerrar Sesion");
-
-        menuBar.add(menu1);
-
-        menu1.add(menuItem20);
-        menu1.add(menuItem21);
-        menu1.add(menuItem22);
-
         setJMenuBar(menuBar);
-
-
+        menuPrincipal = new JMenu("Menu");
+        menuBar.add(menuPrincipal);
+        BtnAdministracion = new JMenuItem("Administracion");
+        menuPrincipal.add(BtnAdministracion);
+        BtnConfiguracion = new JMenuItem("Configuracion");
+        menuPrincipal.add(BtnConfiguracion);
+        BtnCerrarSesion = new JMenuItem("Cerrar Sesion");
+        menuPrincipal.add(BtnCerrarSesion);
+        BtnAdministracion.addActionListener(this);
+        BtnConfiguracion.addActionListener(this);
+        BtnCerrarSesion.addActionListener(this);
+        
+        setJMenuBar(menuBar);
         add(panelPrincipal);
-
-
-        
-
         setVisible(true);
+    };
 
+
+
+    public void actionPerformed(ActionEvent e){
+
+        if(e.getSource() == BtnAdministracion){
+            FrameOdontologo odontologo = new FrameOdontologo();
+            dispose();
+            odontologo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        }
+        if(e.getSource() == BtnConfiguracion){
+            dispose();       
+        }
+        if(e.getSource() == BtnCerrarSesion){
+            FrameLogin login = new FrameLogin();
+            dispose();          
+            login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        }
     }
-//    private void initListeners() {
-//        
-//        ActionListener consolaAdmin = new ActionListener(){
-//            public void actionPerformed(ActionEvent e){
-//                FramePaciente paciente = new FramePaciente();
-//                paciente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//            }
-//        };
-//
-//        menuItem20.addActionListener(consolaAdmin);
-//    }
+
+//    private void initListenersBanner() {
+//    ActionListener administrator = new ActionListener() {
+//        @Override
+//        public void actionPerformed(ActionEvent e) {
+//             FrameOdontologo odontologo = new FrameOdontologo();
+//             dispose();
+//             odontologo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//         }
+//     };
+//     ActionListener cerrar = new ActionListener(){
+//         public void actionPerformed(ActionEvent e){
+//            FrameLogin login = new FrameLogin();
+//            dispose();
+//            login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//            
+//         }
+//     };
+//            BtnAdministracion.addActionListener(administrator);
+//            BtnCerrarSesion.addActionListener(cerrar);
+// }
         
-    
 }

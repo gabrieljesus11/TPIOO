@@ -1,9 +1,7 @@
-import java.awt.*;
-
+//import java.awt.*;
 import javax.swing.*;
-
-import Negocio.*;
-import java.awt.event.*;
+//import Negocio.*;
+//import java.awt.event.*;
 
 import View.*;
 
@@ -34,12 +32,12 @@ public class Main
 //
  //
 //
-       // Banner banner = new Banner();
-       // banner.setVisible(true);
+       Banner banner = new Banner();
+       banner.setVisible(true);
 //
 
-        FrameLogin login = new FrameLogin();
-        login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    //    FrameLogin login = new FrameLogin();
+    //    login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //FramePaciente paciente = new FramePaciente();
         //paciente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

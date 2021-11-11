@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import View.Banner;
 
 
 public class FrameLogin extends JFrame{
@@ -66,10 +67,11 @@ public class FrameLogin extends JFrame{
                 dispose();
             }
         };
-
+            
         btnIniciar.addActionListener(iniciar);
         btnSalir.addActionListener(cerrar);
         btnRegister.addActionListener(registrar);
+        
 
     }
 
