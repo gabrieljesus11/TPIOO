@@ -32,8 +32,8 @@ public class Main
 //
  //
 //
-       Banner banner = new Banner();
-       banner.setVisible(true);
+       PanelManager app = new PanelManager();
+       app.setVisible(true);
 //
 
     //    FrameLogin login = new FrameLogin();

@@ -7,7 +7,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import View.Banner;
 
 
 public class FrameLogin extends JFrame{
@@ -28,6 +27,8 @@ public class FrameLogin extends JFrame{
     JLabel passLabel = new JLabel("Contraseña", JLabel.CENTER);
     JPasswordField passTextField = new JPasswordField();
     TextPrompt passPH = new TextPrompt("Contraseña", passTextField);
+
+    PanelManager panelManager;
 
 
     public FrameLogin(){
@@ -54,17 +55,11 @@ public class FrameLogin extends JFrame{
         };
         ActionListener iniciar = new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                Banner banner = new Banner();
-                banner.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-                dispose();
-                System.out.println("Aquí va la lógica de iniciar sesión");
+                panelManager.armarFramePrincipal();
             }
         };
         ActionListener registrar = new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                FramePaciente paciente = new FramePaciente();
-                paciente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                dispose();
             }
         };
             
