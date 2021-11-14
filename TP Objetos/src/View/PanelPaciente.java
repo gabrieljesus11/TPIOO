@@ -58,7 +58,7 @@ public class PanelPaciente extends JPanel{
 
 
 
-    public PanelPaciente(){
+    public PanelPaciente(PanelManager panelManager){
 
         // Inicializamos los Paneles
         initPacientePanel();

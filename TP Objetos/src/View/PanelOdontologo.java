@@ -49,7 +49,11 @@ public class PanelOdontologo extends JPanel{
         ActionListener cerrar = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                panelManager.armarFramePrincipal();
+                panelManager.cerrarFrame();
+                panelManager = new PanelManager();
+                panelManager.armarManager();
+                panelManager.mostrarFrame();
+                panelManager.mostrarPanelPrincipal();
             }
         };
         ActionListener iniciar = new ActionListener(){

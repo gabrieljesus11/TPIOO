@@ -55,7 +55,11 @@ public class FrameLogin extends JFrame{
         };
         ActionListener iniciar = new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                panelManager.armarFramePrincipal();
+                dispose();
+                panelManager = new PanelManager();
+                panelManager.armarManager();
+                panelManager.mostrarFrame();
+                panelManager.mostrarPanelPrincipal();
             }
         };
         ActionListener registrar = new ActionListener(){
@@ -66,8 +70,6 @@ public class FrameLogin extends JFrame{
         btnIniciar.addActionListener(iniciar);
         btnSalir.addActionListener(cerrar);
         btnRegister.addActionListener(registrar);
-        
-
     }
 
     private void initButtonPanel(){
